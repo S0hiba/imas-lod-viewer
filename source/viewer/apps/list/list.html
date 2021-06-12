@@ -1,0 +1,70 @@
+{strip}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>アイドルマスター LOD viewer(仮)</title>
+        <meta name="description" content="アイドルマスター関連のLODから取得できるデータの一覧表。">
+        <meta name="keywords" content="アイドルマスター,THE IDOLM@STER,アイマス,データ,一覧表">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="/css/{$endPointName}/{$rdfType}.css">
+        <script type="text/javascript"
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="/js/{$endPointName}/{$rdfType}.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>アイドルマスター LOD viewer(仮)</h1>
+            <p>アイドルマスター関連のSPARQLエンドポイントから取得できるデータを、見やすい一覧表として表示するデータビューア(にする予定のページ)です。</p>
+            <nav>
+                <ul>
+                    <li>
+                        <p><a href="https://sparql.crssnky.xyz/imas/" target="_blank">im@sparql</a></p>
+                        <ul>
+                            <li><a href="/viewer/list/imasparql/Idol/">アイドル</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="https://mltd.pikopikopla.net/" target="_blank">pikopikopla.net</a></p>
+                        <ul>
+                            <li><a href="/viewer/list/pikopla/Idol/">アイドル</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <table id="data_table">
+                <thead>
+                    <tr>
+                        {foreach from=$labelList item=label key=key}
+                            <th class="{$key}">{$label}</th>
+                        {/foreach}
+                    </tr>
+                </thead>
+                <tbody>
+                    {foreach from=$dataList item=dataRow}
+                        <tr>
+                            {foreach from=$labelList item=label key=key}
+                                <td>{$dataRow[$key]|default:'-'|nl2br}</td>
+                            {/foreach}
+                        </tr>
+                    {/foreach}
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <p>
+                <small>制作:オシリスP</small>
+                <address>
+                    (不具合などありましたら、<a href="https://twitter.com/osirisP_ITS?lang=ja" target="_blank">Twitter</a>にてお知らせください)
+                </address>
+            </p>
+        </footer>
+    </body>
+</html>
+{/strip}

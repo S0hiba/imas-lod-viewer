@@ -1,0 +1,16 @@
+<ifModule mod_headers.c>
+Header always set Strict-Transport-Security: "max-age=12096000"
+Header always set X-XSS-Protection: "1; mode=block"
+Header always set X-Content-Type-Options: "nosniff"
+Header always set X-Frame-Options: "DENY"
+Header always set X-Download-Options: "noopen"
+</ifModule>
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !\.css$
+RewriteCond %{REQUEST_URI} !\.js$
+RewriteCond %{REQUEST_URI} !\.jpg$
+RewriteCond %{REQUEST_URI} !\.png$
+RewriteCond %{REQUEST_URI} !\.ico$
+RewriteCond %{REQUEST_URI} !\.zip$
+RewriteRule ^(.*)$ index.php [L]

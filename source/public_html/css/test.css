@@ -1,0 +1,65 @@
+table {
+    font-size: 10px;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #FFE492;
+    border: 1px solid #000000;
+}
+
+td {
+    border: 1px solid #000000;
+}
+
+#main_table .memberOf,
+#main_table .owns {
+    min-width: 200px;
+}
+
+#main_table .Hobby {
+    min-width: 150px;
+}
+
+#main_table .name,
+#main_table .nameKana,
+#main_table .familyNameKana,
+#main_table .givenNameKana,
+#main_table .alternateNameKana,
+#main_table .Title,
+#main_table .Talent,
+#main_table .Favorite,
+#main_table .description {
+    min-width: 100px;
+}
+
+#main_table .familyName,
+#main_table .givenName,
+#main_table .alternateName,
+#main_table .cv,
+#main_table .Color {
+    min-width: 70px;
+}
+
+#main_table .Category,
+#main_table .birthDate,
+#main_table .Constellation {
+    min-width: 50px;
+}
+
+/*
+#main_table .Type' => 'タイプ',
+#main_table .Division' => '区分',
+#main_table .Attribute' => '属性',
+#main_table .gender' => '性別',
+#main_table .age' => '年齢',
+#main_table .birthPlace' => '出身地',
+#main_table .BloodType' => '血液型',
+#main_table .Handedness' => '利き手',
+#main_table .height' => '身長',
+#main_table .weight' => '体重',
+#main_table .Bust' => '胸囲',
+#main_table .Waist' => '腹囲',
+#main_table .Hip' => '臀囲',
+#main_table .ShoeSize' => '靴のサイズ',
+*/
